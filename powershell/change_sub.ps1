@@ -1,4 +1,4 @@
-param([bool]$showPressEnter)
+# param([bool]$showPressEnter)
 
 function CheckReadOnlyFlag
 {
@@ -109,8 +109,8 @@ Write-Host "Total diretorio sem arquivo : " $totalDiretorioSemArquivo
 Write-Host "Result                      : " $result
 
 # Write-Host "showPressEnter : $showPressEnter"
-if ($showPressEnter)
-{
-	Write-Host "`n"
-	Read-Host -Prompt "Press <enter> to continue..."
-}
+# if ($showPressEnter)
+# {
+# 	Write-Host "`n"
+# 	Read-Host -Prompt "Press <enter> to continue..."
+# }
