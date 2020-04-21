@@ -49,9 +49,9 @@ if ($askForConfirm)
 	}
 }
 
-$movieFiles = [IO.Directory]::GetFiles($pathMainFolder, "*.rmvb")
-$movieFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.mp4")
-$movieFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.avi")
+# $movieFiles = [IO.Directory]::GetFiles($pathMainFolder, "*.rmvb")
+# $movieFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.mp4")
+# $movieFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.avi")
 $movieFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.mkv")
 
 $subFiles += [IO.Directory]::GetFiles($pathMainFolder, "*.srt")
@@ -139,7 +139,7 @@ foreach ($dir in $dirs)
 	}
 }
 
-if ($showPressEnter)
-{
-	pressEnter
-}
+# if ($showPressEnter)
+# {
+# 	pressEnter
+# }
