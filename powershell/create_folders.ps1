@@ -1,16 +1,10 @@
-param([bool]$showPressEnter, [bool]$askForPath, [bool]$askForConfirm)
+param([bool]$askForPath, [bool]$askForConfirm)
 
 function removeExtensions
 {
 	param([string]$fileName)
 	
 	return $fileName -replace ".rmvb","" -replace ".mp4","" -replace ".avi","" -replace ".mkv","" -replace ".srt",""
-}
-
-function pressEnter
-{
-	Write-Host "`n"
-	Read-Host -Prompt "Press <enter> to continue..."
 }
 
 # =================================================================================================
@@ -30,7 +24,6 @@ else
 if (-not (Test-Path -Path $pathMainFolder -PathType Container))
 {
 	Write-Host "Diretorio invalido!`n"
-	pressEnter
 	exit
 }
 
@@ -44,7 +37,6 @@ if ($askForConfirm)
 	if ($result.ToLower() -eq "n")
 	{
 		Write-Host "`nCancelado!"
-		pressEnter
 		exit
 	}
 }
@@ -62,7 +54,6 @@ $subFilesCount = $subFiles.Count
 if ($movieFilesCount -ne $subFilesCount)
 {
 	Write-Host "Total dos arquivos de filme [$movieFilesCount] e leganda [$subFilesCount] nao sao iguais."
-	pressEnter
 	exit
 }
 
@@ -138,8 +129,3 @@ foreach ($dir in $dirs)
 		Write-Host $fileName
 	}
 }
-
-# if ($showPressEnter)
-# {
-# 	pressEnter
-# }
