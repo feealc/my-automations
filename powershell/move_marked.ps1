@@ -1,4 +1,3 @@
-param([bool]$showPressEnter)
 
 function GetFolderName
 {
@@ -131,10 +130,3 @@ foreach($file in $files)
 # Write-Host "Total not found         : " $totalNotFound
 # Write-Host ""
 # Write-Host "Result                  : " $result
-
-# Write-Host "showPressEnter : $showPressEnter"
-if ($showPressEnter)
-{
-	Write-Host "`n"
-	Read-Host -Prompt "Press <enter> to continue..."
-}
